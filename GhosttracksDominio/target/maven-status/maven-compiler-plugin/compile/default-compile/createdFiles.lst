@@ -6,6 +6,7 @@ itson\org\ghosttracks\entidades\Pago.class
 itson\org\ghosttracks\entidades\Cliente.class
 itson\org\ghosttracks\entidades\Administrador.class
 itson\org\ghosttracks\entidades\Direccion.class
+itson\org\ghosttracks\enums\EstadoPreventa.class
 itson\org\ghosttracks\entidades\ItemCarrito.class
 itson\org\ghosttracks\entidades\Carrito.class
 itson\org\ghosttracks\entidades\ProductoPedido.class
@@ -15,6 +16,9 @@ itson\org\ghosttracks\entidades\Producto.class
 itson\org\ghosttracks\entidades\Sucursal.class
 itson\org\ghosttracks\entidades\Usuario.class
 itson\org\ghosttracks\entidades\PagoTarjeta.class
+itson\org\ghosttracks\entidades\SolicitudPreventa.class
 itson\org\ghosttracks\enums\EstadoProducto.class
+itson\org\ghosttracks\enums\EstadoSolicitudPreventa.class
 itson\org\ghosttracks\enums\TipoPago.class
+itson\org\ghosttracks\entidades\Preventa.class
 itson\org\ghosttracks\enums\EstadoPaquete.class

@@ -16,7 +16,9 @@ public class Main {
         
         VentanaPrincipal ventana = new VentanaPrincipal();
         Navegador navegador = new Navegador(ventana);
-        navegador.irLogin();
+        // navegador.irLogin();
+        navegador.iniciarSesionAdminExitoso();
+        navegador.irModuloPreventas();
         ventana.setVisible(true);
         
     }

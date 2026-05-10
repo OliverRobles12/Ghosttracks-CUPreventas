@@ -3,6 +3,7 @@ package itson.org.ghosttracks.controladores;
 
 import itson.org.ghosttracks.dtos.PedidoDTO;
 import itson.org.ghosttracks.dtos.ProductoDTO;
+import itson.org.ghosttracks.navegadores.NavegadorPreventas;
 import itson.org.ghosttracks.presentacion.VentanaPrincipal;
 import itson.org.ghosttracks.presentacion.administrador.PanelConfirmarEmpaquetado;
 import itson.org.ghosttracks.presentacion.administrador.PanelDatosPaquete;
@@ -128,6 +129,10 @@ public class Navegador {
         pnlResumenPedidoConfirmado vista = new pnlResumenPedidoConfirmado(ctrlVentaLinea);
         vista.cargarDatosPedido(pedidoConfirmado);
         ventana.cambiarPantalla(vista);
+    }
+    
+    public void irModuloPreventas() {
+        new NavegadorPreventas(this.ventana, this).irPantallaPreventas();
     }
     
 }
