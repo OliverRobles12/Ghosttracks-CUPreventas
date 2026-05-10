@@ -1,0 +1,3 @@
+itson\org\skydropx\excepciones\NegocioException.class
+itson\org\skydropx\interfaces\ISkydropxAPI.class
+itson\org\skydropx\objetosNegocio\mock\SkydropxSimuladoBO.class
