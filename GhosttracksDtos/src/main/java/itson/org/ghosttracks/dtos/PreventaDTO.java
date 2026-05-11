@@ -10,34 +10,38 @@ import java.time.LocalDateTime;
  */
 public class PreventaDTO {
     
-    private Long idPreventa;
+    private String idPreventa;
     private String folioPreventa;
     private LocalDateTime fechaPublicacion;
     private LocalDateTime fechaCierre;
     private LocalDateTime fechaProcesado;
     private EstadoPreventa estado;
-    private int limiteStock;
+    private int stock;
+    private int stockAsignado;
     private float precio;
     private String nota;
     private byte[] imagen;
+    private ProductoDTO producto;
 
     public PreventaDTO() {
     }
 
-    public PreventaDTO(Long idPreventa, String folioPreventa, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int limiteStock, float precio, String nota, byte[] imagen) {
+    public PreventaDTO(String idPreventa, String folioPreventa, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int stock, int stockAsignado, float precio, String nota, byte[] imagen, ProductoDTO producto) {
         this.idPreventa = idPreventa;
         this.folioPreventa = folioPreventa;
         this.fechaPublicacion = fechaPublicacion;
         this.fechaCierre = fechaCierre;
         this.fechaProcesado = fechaProcesado;
         this.estado = estado;
-        this.limiteStock = limiteStock;
+        this.stock = stock;
+        this.stockAsignado = stockAsignado;
         this.precio = precio;
         this.nota = nota;
         this.imagen = imagen;
+        this.producto = producto;
     }
 
-    public Long getIdPreventa() {
+    public String getIdPreventa() {
         return idPreventa;
     }
 
@@ -61,8 +65,12 @@ public class PreventaDTO {
         return estado;
     }
 
-    public int getLimiteStock() {
-        return limiteStock;
+    public int getStock() {
+        return stock;
+    }
+
+    public int getStockAsignado() {
+        return stockAsignado;
     }
 
     public float getPrecio() {
@@ -75,6 +83,10 @@ public class PreventaDTO {
 
     public byte[] getImagen() {
         return imagen;
+    }
+
+    public ProductoDTO getProducto() {
+        return producto;
     }
     
 }

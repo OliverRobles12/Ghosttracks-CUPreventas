@@ -21,6 +21,7 @@ public class Preventa {
     private float precio;
     private String nota;
     private byte[] imagen;
+    private Producto producto;
 
     public Preventa() {
     }
@@ -111,6 +112,14 @@ public class Preventa {
 
     public void setImagen(byte[] imagen) {
         this.imagen = imagen;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
                 
 }

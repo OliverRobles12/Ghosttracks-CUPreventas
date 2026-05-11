@@ -105,7 +105,7 @@ public class PantallaConsultarPreventa extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void vtnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vtnVolverActionPerformed
-        // TODO add your handling code here:
+        controlador.irPantallaPreventas();
     }//GEN-LAST:event_vtnVolverActionPerformed
 
 

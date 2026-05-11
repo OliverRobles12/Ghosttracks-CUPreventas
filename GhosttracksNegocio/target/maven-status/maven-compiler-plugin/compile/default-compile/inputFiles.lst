@@ -1,5 +1,7 @@
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\ApplePayAdapter.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\MercadoPagoAdapter.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\PreventaAPreventaDTOAdapter.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\ProductoAProductoDTOAdapter.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\SkydropxAdapter.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\StripeAdapter.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\fabricas\ProveedorPagoFactory.java
@@ -7,6 +9,7 @@ C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\m
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IClientesBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IPaquetesBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IPedidosBO.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IPreventaBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IProductosBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IProveedorEnvios.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IProveedorPago.java
@@ -16,4 +19,5 @@ C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\m
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\objetosNegocio\GestorDePagosBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\objetosNegocio\PaquetesBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\objetosNegocio\PedidosBO.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\objetosNegocio\PreventaBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\objetosNegocio\ProductosBO.java

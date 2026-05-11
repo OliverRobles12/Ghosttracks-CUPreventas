@@ -2,6 +2,10 @@
 package itson.org.ghosttracks.presentacion.preventas;
 
 import itson.org.ghosttracks.controladores.ControladorPreventas;
+import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
+import itson.org.ghosttracks.dtos.PreventaDTO;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -14,6 +18,7 @@ public class PantallaPreventas extends javax.swing.JPanel {
     public PantallaPreventas(ControladorPreventas controlador) {
         this.controlador = controlador;
         initComponents();
+        cargarDatos();
     }
 
     @SuppressWarnings("unchecked")
@@ -34,16 +39,33 @@ public class PantallaPreventas extends javax.swing.JPanel {
 
         tblPreventas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Folio", "Producto", "Stock disp.", "Publicación", "Procesado", "Estado"
+                "Folio", "Producto", "Tipo", "Stock", "Publicación", "Procesado", "Estado"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tblPreventas);
+        if (tblPreventas.getColumnModel().getColumnCount() > 0) {
+            tblPreventas.getColumnModel().getColumn(0).setResizable(false);
+            tblPreventas.getColumnModel().getColumn(1).setResizable(false);
+            tblPreventas.getColumnModel().getColumn(2).setResizable(false);
+            tblPreventas.getColumnModel().getColumn(3).setResizable(false);
+            tblPreventas.getColumnModel().getColumn(4).setResizable(false);
+            tblPreventas.getColumnModel().getColumn(5).setResizable(false);
+            tblPreventas.getColumnModel().getColumn(6).setResizable(false);
+        }
 
         btnEditar.setText("Editar");
         btnEditar.addActionListener(this::btnEditarActionPerformed);
@@ -113,7 +135,33 @@ public class PantallaPreventas extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSolicitudesActionPerformed
 
+    private void cargarDatos() {
+        List<PreventaDTO> preventas = controlador.consultarPreventas(new FiltroPreventaDTO());
+        llenarTabla(preventas);
+    }
+    
+    private void llenarTabla(List<PreventaDTO> preventas) {
+        DefaultTableModel modelo = (DefaultTableModel) tblPreventas.getModel();
+        modelo.setRowCount(0);
+        
+        for (PreventaDTO preventa : preventas) {
+            
+            Object[] fila = new Object[7]; 
 
+            fila[0] = preventa.getFolioPreventa(); // Folio
+            // TODO ver si unimos el nombre y el tipo en un campo
+            fila[1] = preventa.getProducto().getNombre(); // Nombre producto TipoProducto(); // Tipo producto
+            fila[3] = String.format("%d/%d", preventa.getStock(), preventa.getStockAsignado()); // Stock actual y stock asignado
+            fila[4] = preventa.getFechaPublicacion(); // Fecha publicación de la preventa
+            fila[5] = preventa.getFechaProcesado(); // Fecha para procesar las solicitudes
+            fila[6] = preventa.getEstado(); // Estado actual de la preventa
+            
+            modelo.addRow(fila);
+            
+        }
+        
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrearPreventa;
     private javax.swing.JButton btnEditar;

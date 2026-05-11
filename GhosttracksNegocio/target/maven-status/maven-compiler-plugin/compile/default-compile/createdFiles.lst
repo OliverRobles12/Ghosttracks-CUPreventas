@@ -1,8 +1,11 @@
 itson\org\ghosttracks\negocio\objetosNegocio\ProductosBO.class
 itson\org\ghosttracks\negocio\interfaces\IPaquetesBO.class
 itson\org\ghosttracks\negocio\interfaces\IProveedorPago.class
+itson\org\ghosttracks\negocio\interfaces\IPreventaBO.class
 itson\org\ghosttracks\negocio\adaptador\StripeAdapter.class
+itson\org\ghosttracks\negocio\adaptador\PreventaAPreventaDTOAdapter.class
 itson\org\ghosttracks\negocio\objetosNegocio\Excepciones\NegocioException.class
+itson\org\ghosttracks\negocio\adaptador\ProductoAProductoDTOAdapter.class
 itson\org\ghosttracks\negocio\interfaces\IClientesBO.class
 itson\org\ghosttracks\negocio\adaptador\ApplePayAdapter.class
 itson\org\ghosttracks\negocio\fabricas\ProveedorPagoFactory.class
@@ -15,6 +18,7 @@ itson\org\ghosttracks\negocio\objetosNegocio\CarritoBO.class
 itson\org\ghosttracks\negocio\interfaces\ICarritoBO.class
 itson\org\ghosttracks\negocio\objetosNegocio\GestorDePagosBO.class
 itson\org\ghosttracks\negocio\fabricas\ProveedorPagoFactory$1.class
+itson\org\ghosttracks\negocio\objetosNegocio\PreventaBO.class
 itson\org\ghosttracks\negocio\adaptador\MercadoPagoAdapter.class
 itson\org\ghosttracks\negocio\objetosNegocio\PedidosBO.class
 itson\org\ghosttracks\negocio\interfaces\IPedidosBO.class

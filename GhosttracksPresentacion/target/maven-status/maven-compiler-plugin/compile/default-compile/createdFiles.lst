@@ -56,5 +56,6 @@ itson\org\ghosttracks\controladores\Controlador.class
 itson\org\ghosttracks\controladores\ControlLogin.class
 itson\org\ghosttracks\presentacion\cliente\PantallaCarrito$1.class
 itson\org\ghosttracks\presentacion\cliente\PantallaInicioCliente.class
+itson\org\ghosttracks\presentacion\preventas\PantallaPreventas$1.class
 itson\org\ghosttracks\presentacion\cliente\PantallaInicioCliente$4.class
 itson\org\ghosttracks\presentacion\cliente\PantallaFormularioEntrega$1.class
