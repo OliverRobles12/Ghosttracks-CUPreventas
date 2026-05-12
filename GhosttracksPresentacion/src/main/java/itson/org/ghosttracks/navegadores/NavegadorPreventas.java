@@ -15,12 +15,12 @@ import itson.org.ghosttracks.presentacion.preventas.PantallaPreventas;
 public class NavegadorPreventas {
 
     private final VentanaPrincipal ventana;
-    private final Navegador navPrincipal;
+    private final Navegador navegadorPrincipal;
     private final ControladorPreventas controlador;
     
-    public NavegadorPreventas(VentanaPrincipal ventana, Navegador navPrincipal) {
+    public NavegadorPreventas(VentanaPrincipal ventana, Navegador navegadorPrincipal) {
         this.ventana = ventana;
-        this.navPrincipal = navPrincipal;
+        this.navegadorPrincipal = navegadorPrincipal;
         this.controlador = new ControladorPreventas(this);
     }
     
@@ -37,6 +37,10 @@ public class NavegadorPreventas {
     public void irPantallaEditarPreventa() {
         PantallaEditarPreventa vista = new PantallaEditarPreventa(controlador);
         ventana.cambiarPantalla(vista);
+    }
+    
+    public void mostrarMensaje(String mensaje, boolean esError) {
+        navegadorPrincipal.mostrarMensaje(mensaje, esError);
     }
     
 }

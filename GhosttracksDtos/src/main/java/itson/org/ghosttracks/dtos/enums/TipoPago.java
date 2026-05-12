@@ -1,5 +1,5 @@
 
-package itson.org.ghosttracks.enums;
+package itson.org.ghosttracks.dtos.enums;
 
 /**
  *

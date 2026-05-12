@@ -8,15 +8,10 @@ package itson.org.ghosttracks.preventas.excepciones;
 public class PreventaException extends Exception {
 
     private final CodigoErrorPreventa codigoError;
-    
-    public PreventaException(String msg, CodigoErrorPreventa codigo) {
-        super(msg);
-        this.codigoError = codigo;
-    }
-    
-    public PreventaException(String msg, Throwable cause, CodigoErrorPreventa codigo) {
-        super(msg, cause);
-        this.codigoError = codigo;
+
+    public PreventaException(CodigoErrorPreventa codigoError, Throwable cause) {
+        super(cause);
+        this.codigoError = codigoError;
     }
 
     public CodigoErrorPreventa getCodigoError() {

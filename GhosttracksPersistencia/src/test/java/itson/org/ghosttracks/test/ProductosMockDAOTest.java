@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 
 import itson.org.ghosttracks.dtos.ProductoDTO;
 import itson.org.ghosttracks.entidades.Producto;
-import itson.org.ghosttracks.enums.EstadoProducto;
-import itson.org.ghosttracks.enums.TipoProducto;
+import itson.org.ghosttracks.dtos.enums.EstadoProducto;
+import itson.org.ghosttracks.dtos.enums.TipoProducto;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import itson.org.ghosttracks.mocks.ProductosMockDAO;
 import java.util.ArrayList;

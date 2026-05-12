@@ -1,8 +1,9 @@
-package itson.org.ghosttracks.enums;
+
+package itson.org.ghosstracks.persistencia.enums;
 
 /**
  *
- * @author emyla
+ * @author oliro
  */
 public enum TipoProducto {
     VINILO,

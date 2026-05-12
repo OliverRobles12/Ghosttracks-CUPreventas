@@ -162,10 +162,10 @@ public class PantallaVentas extends javax.swing.JPanel {
         }
         
         String estadoSeleccionado = (String) cmbxEstados.getSelectedItem();
-        itson.org.ghosttracks.enums.EstadoPedidoDTO estado = null;
+        itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO estado = null;
         
         if (estadoSeleccionado != null && !estadoSeleccionado.equals("Todos los estados")) {
-            estado = itson.org.ghosttracks.enums.EstadoPedidoDTO.valueOf(estadoSeleccionado);
+            estado = itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO.valueOf(estadoSeleccionado);
         }
 
         control.aplicarFiltros(nombre, estado, this);
@@ -223,7 +223,7 @@ public class PantallaVentas extends javax.swing.JPanel {
     private void configurarFiltros() {
         cmbxEstados.removeAllItems();
         cmbxEstados.addItem("Todos los estados");
-        for (itson.org.ghosttracks.enums.EstadoPedidoDTO estado : itson.org.ghosttracks.enums.EstadoPedidoDTO.values()) {
+        for (itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO estado : itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO.values()) {
             cmbxEstados.addItem(estado.name());
         }
     }

@@ -4,11 +4,12 @@ package itson.org.ghosttracks.controladores;
 import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
 import itson.org.ghosttracks.dtos.PreventaDTO;
 import itson.org.ghosttracks.navegadores.NavegadorPreventas;
-import itson.org.ghosttracks.preventaas.IPreventas;
-import itson.org.ghosttracks.preventaas.Preventas;
+import itson.org.ghosttracks.negocio.objetosNegocio.Excepciones.NegocioException;
+import itson.org.ghosttracks.preventaas.CUPreventas;
 import itson.org.ghosttracks.preventas.excepciones.PreventaException;
 import java.util.Collections;
 import java.util.List;
+import itson.org.ghosttracks.preventaas.ICUPreventas;
 
 /**
  *
@@ -17,7 +18,7 @@ import java.util.List;
 public class ControladorPreventas {
     
     private final NavegadorPreventas navegador;
-    private final IPreventas subsysPreventas = new Preventas();
+    private final ICUPreventas subsysPreventas = new CUPreventas();
     
     public ControladorPreventas(NavegadorPreventas navegador) {
         this.navegador = navegador;
@@ -38,8 +39,8 @@ public class ControladorPreventas {
     public List<PreventaDTO> consultarPreventas(FiltroPreventaDTO filtro) {
         try {
             return subsysPreventas.consultarPreventas(filtro);
-        } catch (PreventaException ex) {
-            // TODO manejo de la excepcion
+        } catch (NegocioException ex) {
+            navegador.mostrarMensaje(ex.getMessage(), true);
             return Collections.emptyList();
         }
     }

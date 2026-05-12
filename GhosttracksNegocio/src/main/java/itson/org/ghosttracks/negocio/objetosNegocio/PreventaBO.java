@@ -19,6 +19,9 @@ import java.util.List;
 public class PreventaBO implements IPreventaBO{
 
     private IFachadaPersistencia datos = new FachadaPersistencia();
+
+    public PreventaBO() {
+    }
     
     @Override
     public List<PreventaDTO> consultarPreventas(FiltroPreventaDTO filtro) throws NegocioException {
@@ -26,8 +29,7 @@ public class PreventaBO implements IPreventaBO{
             List<Preventa> listaEntidades = datos.consultarPreventas(filtro);
             return PreventaAPreventaDTOAdapter.adaptList(listaEntidades);
         } catch (PersistenciaException ex) {
-            // TODO manejo de la excepcion
-            throw new NegocioException();
+            throw new NegocioException("No se puedieron recuperar las preventas registradas.", ex);
         }
         
     }

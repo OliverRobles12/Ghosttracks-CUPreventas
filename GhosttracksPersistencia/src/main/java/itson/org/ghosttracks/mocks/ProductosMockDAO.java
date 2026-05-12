@@ -1,10 +1,10 @@
 package itson.org.ghosttracks.mocks;
 
+import itson.org.ghosstracks.persistencia.enums.EstadoProducto;
+import itson.org.ghosstracks.persistencia.enums.TipoProducto;
 import itson.org.ghosttracks.daos.IProductosDAO;
 import itson.org.ghosttracks.dtos.ProductoDTO;
 import itson.org.ghosttracks.entidades.Producto;
-import itson.org.ghosttracks.enums.EstadoProducto;
-import itson.org.ghosttracks.enums.TipoProducto;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,6 +1,6 @@
 package itson.org.ghosttracks.negocio.adaptador;
 
-import itson.org.ghosttracks.enums.TipoPago;
+import itson.org.ghosttracks.dtos.enums.TipoPago;
 import itson.org.ghosttracks.negocio.interfaces.IProveedorPago;
 import itson.org.ghosttracks.negocio.objetosNegocio.Excepciones.NegocioException;
 import itson.org.sistemastripeapi.core.StripeCliente;

@@ -1,7 +1,7 @@
 
 package itson.org.ghosttracks.dtos;
 
-import itson.org.ghosttracks.enums.EstadoPedidoDTO;
+import itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO;
 import java.time.LocalDateTime;
 
 /**

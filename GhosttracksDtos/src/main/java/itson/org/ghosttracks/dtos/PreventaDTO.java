@@ -1,7 +1,7 @@
 
 package itson.org.ghosttracks.dtos;
 
-import itson.org.ghosttracks.enums.EstadoPreventa;
+import itson.org.ghosttracks.dtos.enums.EstadoPreventa;
 import java.time.LocalDateTime;
 
 /**

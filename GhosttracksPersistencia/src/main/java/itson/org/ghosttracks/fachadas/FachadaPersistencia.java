@@ -1,8 +1,8 @@
 
 package itson.org.ghosttracks.fachadas;
 
+import itson.org.ghosstracks.persistencia.dtos.FiltroPreventaDTO;
 import itson.org.ghosttracks.daos.IPreventasDAO;
-import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
 import itson.org.ghosttracks.entidades.Preventa;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import itson.org.ghosttracks.fabricas.FabricaDAOProducer;
@@ -23,8 +23,9 @@ public class FachadaPersistencia implements IFachadaPersistencia {
     }
     
     @Override
-    public List<Preventa> consultarPreventas(FiltroPreventaDTO filtro) throws PersistenciaException {
+    public List<Preventa> consultarPreventas(FiltroPreventaDTO filtro) throws PersistenciaException{
         return preventasDAO.consultarPreventas(filtro);
+        
     }
     
 }

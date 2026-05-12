@@ -2,7 +2,7 @@
 package itson.org.ghosttracks.presentacion.cliente;
 
 import itson.org.ghosttracks.mocks.ProductosMockDAO;
-import itson.org.ghosttracks.enums.TipoProducto;
+import itson.org.ghosttracks.dtos.enums.TipoProducto;
 import itson.org.ghosttracks.utilerias.pnlProductoCatalogo;
 import itson.org.ghosttracks.controladores.ControlVentaEnLinea;
 import itson.org.ghosttracks.dtos.ProductoDTO;

@@ -1,9 +1,9 @@
 
 package itson.org.ghosttracks.daos;
 
-import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
-import itson.org.ghosttracks.dtos.NuevaPreventaDTO;
-import itson.org.ghosttracks.dtos.PreventaActualizadaDTO;
+import itson.org.ghosstracks.persistencia.dtos.FiltroPreventaDTO;
+import itson.org.ghosstracks.persistencia.dtos.NuevaPreventaDTO;
+import itson.org.ghosstracks.persistencia.dtos.PreventaActualizadaDTO;
 import itson.org.ghosttracks.entidades.Preventa;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import java.util.List;

@@ -6,7 +6,7 @@ package itson.org.ghosttracks.presentacion.administrador;
 
 import itson.org.ghosttracks.controladores.ControladorVentasAdmin;
 import itson.org.ghosttracks.dtos.PedidoDTO;
-import static itson.org.ghosttracks.enums.EstadoPedidoDTO.EN_PREPARACION;
+import static itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO.EN_PREPARACION;
 import javax.swing.JOptionPane;
 
 /**

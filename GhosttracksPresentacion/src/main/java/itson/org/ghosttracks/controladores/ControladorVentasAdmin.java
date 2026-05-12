@@ -1,7 +1,7 @@
 package itson.org.ghosttracks.controladores;
 
 import itson.org.ghosttracks.dtos.ItemCarritoDTO;
-import itson.org.ghosttracks.enums.EstadoPedidoDTO;
+import itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO;
 import itson.org.ghosttracks.dtos.PedidoDTO;
 import itson.org.ghosttracks.dtos.PaqueteDTO;
 import itson.org.ghosttracks.presentacion.administrador.PantallaVentas;

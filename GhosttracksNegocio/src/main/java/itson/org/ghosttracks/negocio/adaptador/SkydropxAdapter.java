@@ -1,7 +1,7 @@
 package itson.org.ghosttracks.negocio.adaptador;
 
 import itson.org.ghosttracks.dtos.PaqueteDTO;
-import itson.org.ghosttracks.enums.EstadoPaquete;
+import itson.org.ghosttracks.dtos.enums.EstadoPaquete;
 import itson.org.ghosttracks.negocio.interfaces.IProveedorEnvios;
 import itson.org.ghosttracks.negocio.objetosNegocio.Excepciones.NegocioException;
 import itson.org.sistemaskydropxapi.servicios.SkydropxServicio;

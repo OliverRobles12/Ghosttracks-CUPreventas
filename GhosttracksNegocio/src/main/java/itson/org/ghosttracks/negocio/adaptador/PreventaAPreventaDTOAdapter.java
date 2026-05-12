@@ -3,7 +3,7 @@ package itson.org.ghosttracks.negocio.adaptador;
 
 import itson.org.ghosttracks.dtos.PreventaDTO;
 import itson.org.ghosttracks.entidades.Preventa;
-import itson.org.ghosttracks.enums.EstadoPreventa;
+import itson.org.ghosttracks.dtos.enums.EstadoPreventa;
 import java.util.ArrayList;
 import java.util.List;
 

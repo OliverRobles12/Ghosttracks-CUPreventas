@@ -2,7 +2,7 @@
 package itson.org.ghosttracks.presentacion.cliente.metodosDePago;
 
 import itson.org.ghosttracks.dtos.DatosPagoDTO;
-import itson.org.ghosttracks.enums.TipoPago;
+import itson.org.ghosttracks.dtos.enums.TipoPago;
 import itson.org.ghosttracks.presentacion.cliente.PantallaSeleccionMetodoDePago;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;

@@ -1,15 +1,16 @@
 
-package itson.org.ghosttracks.dtos;
+package itson.org.ghosstracks.persistencia.dtos;
 
-import itson.org.ghosttracks.dtos.enums.EstadoPreventa;
+import itson.org.ghosstracks.persistencia.enums.EstadoPreventa;
 import java.time.LocalDateTime;
 
 /**
  *
  * @author oliro
  */
-public class NuevaPreventaDTO {
+public class PreventaActualizadaDTO {
     
+    private String folioPreventa;
     private LocalDateTime fechaPublicacion;
     private LocalDateTime fechaCierre;
     private LocalDateTime fechaProcesado;
@@ -19,10 +20,11 @@ public class NuevaPreventaDTO {
     private String nota;
     private byte[] imagen;
 
-    public NuevaPreventaDTO() {
+    public PreventaActualizadaDTO() {
     }
 
-    public NuevaPreventaDTO(LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int limiteStock, float precio, String nota, byte[] imagen) {
+    public PreventaActualizadaDTO(String folioPreventa, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int limiteStock, float precio, String nota, byte[] imagen) {
+        this.folioPreventa = folioPreventa;
         this.fechaPublicacion = fechaPublicacion;
         this.fechaCierre = fechaCierre;
         this.fechaProcesado = fechaProcesado;
@@ -31,6 +33,10 @@ public class NuevaPreventaDTO {
         this.precio = precio;
         this.nota = nota;
         this.imagen = imagen;
+    }
+
+    public String getFolioPreventa() {
+        return folioPreventa;
     }
 
     public LocalDateTime getFechaPublicacion() {
@@ -48,7 +54,7 @@ public class NuevaPreventaDTO {
     public EstadoPreventa getEstado() {
         return estado;
     }
-    
+
     public int getLimiteStock() {
         return limiteStock;
     }

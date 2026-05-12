@@ -1,7 +1,7 @@
 
 package itson.org.ghosttracks.dtos;
 
-import itson.org.ghosttracks.enums.TipoPago;
+import itson.org.ghosttracks.dtos.enums.TipoPago;
 import java.time.LocalDateTime;
 
 /**

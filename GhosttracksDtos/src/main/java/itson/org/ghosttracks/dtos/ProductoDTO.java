@@ -1,7 +1,7 @@
 package itson.org.ghosttracks.dtos;
 
-import itson.org.ghosttracks.enums.EstadoProducto;
-import itson.org.ghosttracks.enums.TipoProducto;
+import itson.org.ghosttracks.dtos.enums.EstadoProducto;
+import itson.org.ghosttracks.dtos.enums.TipoProducto;
 import java.util.List;
 
 /**

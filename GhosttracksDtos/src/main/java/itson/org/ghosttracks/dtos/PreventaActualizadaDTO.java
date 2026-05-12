@@ -1,7 +1,7 @@
 
 package itson.org.ghosttracks.dtos;
 
-import itson.org.ghosttracks.enums.EstadoPedidoDTO;
+import itson.org.ghosttracks.dtos.enums.EstadoPreventa;
 import java.time.LocalDateTime;
 
 /**
@@ -14,7 +14,7 @@ public class PreventaActualizadaDTO {
     private LocalDateTime fechaPublicacion;
     private LocalDateTime fechaCierre;
     private LocalDateTime fechaProcesado;
-    private EstadoPedidoDTO estado;
+    private EstadoPreventa estado;
     private int limiteStock;
     private float precio;
     private String nota;
@@ -23,7 +23,7 @@ public class PreventaActualizadaDTO {
     public PreventaActualizadaDTO() {
     }
 
-    public PreventaActualizadaDTO(String folioPreventa, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPedidoDTO estado, int limiteStock, float precio, String nota, byte[] imagen) {
+    public PreventaActualizadaDTO(String folioPreventa, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int limiteStock, float precio, String nota, byte[] imagen) {
         this.folioPreventa = folioPreventa;
         this.fechaPublicacion = fechaPublicacion;
         this.fechaCierre = fechaCierre;
@@ -51,7 +51,7 @@ public class PreventaActualizadaDTO {
         return fechaProcesado;
     }
 
-    public EstadoPedidoDTO getEstado() {
+    public EstadoPreventa getEstado() {
         return estado;
     }
 

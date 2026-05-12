@@ -1,6 +1,6 @@
 package itson.org.ghosttracks.negocio.fabricas;
 
-import itson.org.ghosttracks.enums.TipoPago;
+import itson.org.ghosttracks.dtos.enums.TipoPago;
 import itson.org.ghosttracks.negocio.adaptador.ApplePayAdapter;
 import itson.org.ghosttracks.negocio.adaptador.MercadoPagoAdapter;
 import itson.org.ghosttracks.negocio.adaptador.StripeAdapter;

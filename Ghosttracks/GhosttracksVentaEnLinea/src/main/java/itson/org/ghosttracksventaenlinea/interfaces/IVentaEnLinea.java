@@ -10,7 +10,7 @@ import itson.org.ghosttracks.dtos.NuevoPedidoDTO;
 import itson.org.ghosttracks.dtos.PaqueteDTO;
 import itson.org.ghosttracks.dtos.PedidoDTO;
 import itson.org.ghosttracks.dtos.ProductoDTO;
-import itson.org.ghosttracks.enums.EstadoPedidoDTO;
+import itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO;
 import itson.org.ghosttracksventaenlinea.excepciones.VentaEnLineaException;
 import java.util.List;
 

@@ -1,14 +1,15 @@
  
 package itson.org.ghosttracks.mocks;
 
+import itson.org.ghosstracks.persistencia.dtos.FiltroPreventaDTO;
+import itson.org.ghosstracks.persistencia.dtos.NuevaPreventaDTO;
+import itson.org.ghosstracks.persistencia.dtos.PreventaActualizadaDTO;
+import itson.org.ghosstracks.persistencia.enums.EstadoPreventa;
 import itson.org.ghosttracks.daos.IPreventasDAO;
 import itson.org.ghosttracks.daos.IProductosDAO;
-import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
-import itson.org.ghosttracks.dtos.NuevaPreventaDTO;
-import itson.org.ghosttracks.dtos.PreventaActualizadaDTO;
 import itson.org.ghosttracks.entidades.Preventa;
 import itson.org.ghosttracks.entidades.Producto;
-import itson.org.ghosttracks.enums.EstadoPreventa;
+import itson.org.ghosttracks.exceptions.PersistenciaException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -107,7 +108,7 @@ public class PreventasMockDAO implements IPreventasDAO {
     }
     
     @Override
-    public Preventa registrarPreventa(NuevaPreventaDTO dto) {
+    public Preventa registrarPreventa(NuevaPreventaDTO dto) throws PersistenciaException  {
         Preventa p = new Preventa();
         p.setIdPreventa(String.valueOf(System.currentTimeMillis())); // Generamos id
         p.setImagen(dto.getImagen()); 
@@ -119,7 +120,7 @@ public class PreventasMockDAO implements IPreventasDAO {
     }
 
     @Override
-    public List<Preventa> consultarPreventas(FiltroPreventaDTO filtro) {
+    public List<Preventa> consultarPreventas(FiltroPreventaDTO filtro) throws PersistenciaException  {
         return baseDeDatosSimulada.stream()
             .filter(p -> {
                 // Filtro por Folio (si no es nulo)
@@ -133,21 +134,21 @@ public class PreventasMockDAO implements IPreventasDAO {
     }
 
     @Override
-    public Preventa consultarPreventa(String folio) {
+    public Preventa consultarPreventa(String folio) throws PersistenciaException {
         return baseDeDatosSimulada.stream()
                 .filter(p -> p.getFolioPreventa().equals(folio))
                 .findFirst().orElse(null);
     }
 
     @Override
-    public Preventa actualizarPreventa(PreventaActualizadaDTO dto) {
+    public Preventa actualizarPreventa(PreventaActualizadaDTO dto) throws PersistenciaException {
         Preventa p = consultarPreventa(dto.getFolioPreventa());
         if(p != null) p.setPrecio(dto.getPrecio());
         return p;
     }
 
     @Override
-    public Preventa eliminarPreventa(String folio) {
+    public Preventa eliminarPreventa(String folio) throws PersistenciaException {
         Preventa p = consultarPreventa(folio);
         baseDeDatosSimulada.remove(p);
         return p;

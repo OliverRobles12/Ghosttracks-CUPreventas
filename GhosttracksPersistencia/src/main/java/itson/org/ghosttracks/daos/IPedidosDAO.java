@@ -6,7 +6,7 @@ package itson.org.ghosttracks.daos;
 
 import itson.org.ghosttracks.entidades.Pedido;
 import itson.org.ghosttracks.enums.EstadoPedido;
-import itson.org.ghosttracks.enums.EstadoPedidoDTO;
+import itson.org.ghosttracks.dtos.enums.EstadoPedidoDTO;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import java.util.List;
 
