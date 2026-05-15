@@ -6,6 +6,13 @@ C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\DireccionClienteDTO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\DireccionEntregaDTO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\DireccionSucursalDTO.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\enums\EstadoPaquete.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\enums\EstadoPedidoDTO.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\enums\EstadoPreventa.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\enums\EstadoProducto.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\enums\EstadoSolicitudPedido.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\enums\TipoPago.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\enums\TipoProducto.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\FiltroPreventaDTO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\ItemCarritoDTO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\NuevaPreventaDTO.java
@@ -19,10 +26,3 @@ C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\ProductoDTO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\SucursalDTO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\dtos\UsuarioDTO.java
-C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\enums\EstadoPaquete.java
-C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\enums\EstadoPedidoDTO.java
-C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\enums\EstadoPreventa.java
-C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\enums\EstadoProducto.java
-C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\enums\EstadoSolicitudPedido.java
-C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\enums\TipoPago.java
-C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksDtos\src\main\java\itson\org\ghosttracks\enums\TipoProducto.java

@@ -1,9 +1,9 @@
 
-package itson.org.ghosttracks.negocio.adaptador;
+package itson.org.ghosttracks.negocio.mappers;
 
 import itson.org.ghosttracks.dtos.PreventaDTO;
-import itson.org.ghosttracks.entidades.Preventa;
 import itson.org.ghosttracks.dtos.enums.EstadoPreventa;
+import itson.org.ghosttracks.entidades.Preventa;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +11,9 @@ import java.util.List;
  *
  * @author oliro
  */
-public class PreventaAPreventaDTOAdapter {
+public class PreventaMapper {
     
-    public static PreventaDTO adapt(Preventa preventa){ 
+    public static PreventaDTO toDTO(Preventa preventa){ 
         
         PreventaDTO preventaDTO = new PreventaDTO(
                 preventa.getIdPreventa(), 
@@ -27,19 +27,19 @@ public class PreventaAPreventaDTOAdapter {
                 preventa.getPrecio(), 
                 preventa.getNota(), 
                 preventa.getImagen(), 
-                ProductoAProductoDTOAdapter.adapt(preventa.getProducto())
+                ProductoMapper.toDTO(preventa.getProducto())
         );
         
         return preventaDTO;
         
     }
     
-    public static List<PreventaDTO> adaptList(List<Preventa> listaEntidades) {
+    public static List<PreventaDTO> toDTO(List<Preventa> listaEntidades) {
         List<PreventaDTO> listaDtos = new ArrayList<>();
         
         if (listaEntidades != null && !listaEntidades.isEmpty()) {
             for (Preventa entidad : listaEntidades) {
-                listaDtos.add(adapt(entidad));
+                listaDtos.add(toDTO(entidad));
             }
         }
         

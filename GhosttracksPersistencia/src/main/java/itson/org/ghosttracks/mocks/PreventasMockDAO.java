@@ -2,13 +2,11 @@
 package itson.org.ghosttracks.mocks;
 
 import itson.org.ghosstracks.persistencia.dtos.FiltroPreventaDTO;
-import itson.org.ghosstracks.persistencia.dtos.NuevaPreventaDTO;
-import itson.org.ghosstracks.persistencia.dtos.PreventaActualizadaDTO;
-import itson.org.ghosstracks.persistencia.enums.EstadoPreventa;
 import itson.org.ghosttracks.daos.IPreventasDAO;
 import itson.org.ghosttracks.daos.IProductosDAO;
 import itson.org.ghosttracks.entidades.Preventa;
 import itson.org.ghosttracks.entidades.Producto;
+import itson.org.ghosttracks.enums.EstadoPreventa;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -108,11 +106,11 @@ public class PreventasMockDAO implements IPreventasDAO {
     }
     
     @Override
-    public Preventa registrarPreventa(NuevaPreventaDTO dto) throws PersistenciaException  {
+    public Preventa registrarPreventa(Preventa nuevaPreventa) throws PersistenciaException  {
         Preventa p = new Preventa();
         p.setIdPreventa(String.valueOf(System.currentTimeMillis())); // Generamos id
-        p.setImagen(dto.getImagen()); 
-        p.setPrecio(dto.getPrecio());
+        p.setImagen(nuevaPreventa.getImagen()); 
+        p.setPrecio(nuevaPreventa.getPrecio());
         
         baseDeDatosSimulada.add(p);
         System.out.println("Mock: Preventa guardada con éxito. Folio: " + p.getFolioPreventa());
@@ -141,9 +139,9 @@ public class PreventasMockDAO implements IPreventasDAO {
     }
 
     @Override
-    public Preventa actualizarPreventa(PreventaActualizadaDTO dto) throws PersistenciaException {
-        Preventa p = consultarPreventa(dto.getFolioPreventa());
-        if(p != null) p.setPrecio(dto.getPrecio());
+    public Preventa actualizarPreventa(Preventa preventaActualizada) throws PersistenciaException {
+        Preventa p = consultarPreventa(preventaActualizada.getFolioPreventa());
+        if(p != null) p.setPrecio(preventaActualizada.getPrecio());
         return p;
     }
 

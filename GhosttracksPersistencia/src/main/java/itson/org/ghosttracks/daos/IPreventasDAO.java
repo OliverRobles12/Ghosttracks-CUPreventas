@@ -2,8 +2,6 @@
 package itson.org.ghosttracks.daos;
 
 import itson.org.ghosstracks.persistencia.dtos.FiltroPreventaDTO;
-import itson.org.ghosstracks.persistencia.dtos.NuevaPreventaDTO;
-import itson.org.ghosstracks.persistencia.dtos.PreventaActualizadaDTO;
 import itson.org.ghosttracks.entidades.Preventa;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import java.util.List;
@@ -18,9 +16,9 @@ public interface IPreventasDAO {
     
     public abstract Preventa consultarPreventa(String folio) throws PersistenciaException;
     
-    public abstract Preventa registrarPreventa(NuevaPreventaDTO nuevaPreventa) throws PersistenciaException;
+    public abstract Preventa registrarPreventa(Preventa nuevaPreventa) throws PersistenciaException;
     
-    public abstract Preventa actualizarPreventa(PreventaActualizadaDTO preventaActualizada) throws PersistenciaException;
+    public abstract Preventa actualizarPreventa(Preventa preventaActualizada) throws PersistenciaException;
     
     public abstract Preventa eliminarPreventa(String folio) throws PersistenciaException;
     

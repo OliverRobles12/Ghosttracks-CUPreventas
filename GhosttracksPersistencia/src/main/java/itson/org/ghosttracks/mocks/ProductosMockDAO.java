@@ -1,10 +1,9 @@
 package itson.org.ghosttracks.mocks;
 
-import itson.org.ghosstracks.persistencia.enums.EstadoProducto;
-import itson.org.ghosstracks.persistencia.enums.TipoProducto;
 import itson.org.ghosttracks.daos.IProductosDAO;
-import itson.org.ghosttracks.dtos.ProductoDTO;
 import itson.org.ghosttracks.entidades.Producto;
+import itson.org.ghosttracks.enums.EstadoProducto;
+import itson.org.ghosttracks.enums.TipoProducto;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -152,35 +151,19 @@ public class ProductosMockDAO implements IProductosDAO {
     }
 
     @Override
-    public Producto agregar(ProductoDTO productoDTO) throws PersistenciaException {
-        if (productoDTO == null) {
+    public Producto agregar(Producto nuevoProducto) throws PersistenciaException {
+        if (nuevoProducto == null) {
             throw new PersistenciaException("No se puede agregar un producto nulo.");
         }
-        if (productoDTO.getNombre() == null || productoDTO.getNombre().trim().isEmpty()) {
+        if (nuevoProducto.getNombre() == null || nuevoProducto.getNombre().trim().isEmpty()) {
             throw new PersistenciaException("El producto debe tener un nombre válido.");
         }
-
-        try {
-            Producto nuevaEntidad = new Producto(
-            contadorId++, 
-            productoDTO.getNombre(),
-            productoDTO.getImgProducto(),
-            productoDTO.getTipoProducto(),
-            productoDTO.getArtista(),
-            productoDTO.getGenero(),
-            productoDTO.getSetlist(),
-            productoDTO.getPrecio(),
-            productoDTO.getStock(),
-            productoDTO.getEstado()
-        );
-
-        this.productosDB.add(nuevaEntidad);
-        return nuevaEntidad;
-            
-        } catch (Exception e) {
-            LOGGER.severe("Error crítico e inesperado al intentar agregar un nuevo producto" + e.getMessage());
-            throw new PersistenciaException("No se pudo guardar el producto debido a un error interno.", e);
-        }
+        
+        nuevoProducto.setIdProducto(contadorId++);
+        
+        this.productosDB.add(nuevoProducto);
+        return nuevoProducto;
+        
     }
     
 }

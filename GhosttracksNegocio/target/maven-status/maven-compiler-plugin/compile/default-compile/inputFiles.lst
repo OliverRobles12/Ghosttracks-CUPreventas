@@ -1,6 +1,5 @@
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\ApplePayAdapter.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\MercadoPagoAdapter.java
-C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\PreventaAPreventaDTOAdapter.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\ProductoAProductoDTOAdapter.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\SkydropxAdapter.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\adaptador\StripeAdapter.java
@@ -13,6 +12,13 @@ C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\m
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IProductosBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IProveedorEnvios.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\interfaces\IProveedorPago.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\mappers\CarritoMapper.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\mappers\ClienteMapper.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\mappers\FiltroPreventaMapper.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\mappers\PaqueteMapper.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\mappers\PedidoMapper.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\mappers\PreventaMapper.java
+C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\mappers\ProductoMapper.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\objetosNegocio\CarritoBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\objetosNegocio\ClientesBO.java
 C:\Users\oliro\Documents\GitHub\Ghosttracks-CUPreventas\GhosttracksNegocio\src\main\java\itson\org\ghosttracks\negocio\objetosNegocio\Excepciones\NegocioException.java
