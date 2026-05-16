@@ -5,13 +5,11 @@
 package itson.org.ghosttracks.negocio.objetosNegocio;
 
 import itson.org.ghosttracks.daos.IProductosDAO;
-import itson.org.ghosttracks.dtos.ProductoDTO;
 import itson.org.ghosttracks.entidades.Producto;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import itson.org.ghosttracks.mocks.ProductosMockDAO;
 import itson.org.ghosttracks.negocio.interfaces.IProductosBO;
 import itson.org.ghosttracks.negocio.objetosNegocio.Excepciones.NegocioException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

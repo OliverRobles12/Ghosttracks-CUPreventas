@@ -10,11 +10,12 @@ import java.time.LocalDateTime;
  */
 public class NuevaPreventaDTO {
     
+    private String folio;
     private LocalDateTime fechaPublicacion;
     private LocalDateTime fechaCierre;
     private LocalDateTime fechaProcesado;
     private EstadoPreventa estado;
-    private int limiteStock;
+    private int stockAsignado;
     private float precio;
     private String nota;
     private byte[] imagen;
@@ -22,15 +23,24 @@ public class NuevaPreventaDTO {
     public NuevaPreventaDTO() {
     }
 
-    public NuevaPreventaDTO(LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int limiteStock, float precio, String nota, byte[] imagen) {
+    public NuevaPreventaDTO(String folio, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int stockAsignado, float precio, String nota, byte[] imagen) {
+        this.folio = folio;
         this.fechaPublicacion = fechaPublicacion;
         this.fechaCierre = fechaCierre;
         this.fechaProcesado = fechaProcesado;
         this.estado = estado;
-        this.limiteStock = limiteStock;
+        this.stockAsignado = stockAsignado;
         this.precio = precio;
         this.nota = nota;
         this.imagen = imagen;
+    }
+
+    public String getFolio() {
+        return folio;
+    }
+
+    public void setFolio(String folio) {
+        this.folio = folio;
     }
 
     public LocalDateTime getFechaPublicacion() {
@@ -48,9 +58,9 @@ public class NuevaPreventaDTO {
     public EstadoPreventa getEstado() {
         return estado;
     }
-    
-    public int getLimiteStock() {
-        return limiteStock;
+
+    public int getStockAsignado() {
+        return stockAsignado;
     }
 
     public float getPrecio() {

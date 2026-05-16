@@ -12,6 +12,9 @@ import java.util.List;
  */
 public interface IFachadaPersistencia {
     
+    // Preventas
     public abstract List<Preventa> consultarPreventas(FiltroPreventaDTO filtro) throws PersistenciaException;
+    
+    public abstract Preventa registrarPreventa(Preventa nuevaPreventa) throws PersistenciaException;
     
 }

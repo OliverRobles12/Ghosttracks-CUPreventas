@@ -16,14 +16,29 @@ public class Preventa {
     private LocalDateTime fechaCierre;
     private LocalDateTime fechaProcesado;
     private EstadoPreventa estado;
-    private int stock;
-    private int stockAsignado;
-    private float precio;
+    private Integer stock;
+    private Integer stockAsignado;
+    private Float precio;
     private String nota;
     private byte[] imagen;
     private Producto producto;
 
     public Preventa() {
+    }
+
+    public Preventa(String idPreventa, String folioPreventa, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, Integer stock, Integer stockAsignado, Float precio, String nota, byte[] imagen, Producto producto) {
+        this.idPreventa = idPreventa;
+        this.folioPreventa = folioPreventa;
+        this.fechaPublicacion = fechaPublicacion;
+        this.fechaCierre = fechaCierre;
+        this.fechaProcesado = fechaProcesado;
+        this.estado = estado;
+        this.stock = stock;
+        this.stockAsignado = stockAsignado;
+        this.precio = precio;
+        this.nota = nota;
+        this.imagen = imagen;
+        this.producto = producto;
     }
 
     public String getIdPreventa() {
@@ -74,27 +89,27 @@ public class Preventa {
         this.estado = estado;
     }
 
-    public int getStock() {
+    public Integer getStock() {
         return stock;
     }
 
-    public void setStock(int stock) {
+    public void setStock(Integer stock) {
         this.stock = stock;
     }
 
-    public int getStockAsignado() {
+    public Integer getStockAsignado() {
         return stockAsignado;
     }
 
-    public void setStockAsignado(int stockAsignado) {
+    public void setStockAsignado(Integer stockAsignado) {
         this.stockAsignado = stockAsignado;
     }
 
-    public float getPrecio() {
+    public Float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(Float precio) {
         this.precio = precio;
     }
 
@@ -121,5 +136,5 @@ public class Preventa {
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
-                
+    
 }

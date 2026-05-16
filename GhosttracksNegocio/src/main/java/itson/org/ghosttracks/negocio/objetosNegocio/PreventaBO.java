@@ -2,7 +2,9 @@
 package itson.org.ghosttracks.negocio.objetosNegocio;
 
 import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
+import itson.org.ghosttracks.dtos.NuevaPreventaDTO;
 import itson.org.ghosttracks.dtos.PreventaDTO;
+import itson.org.ghosttracks.dtos.codigos.CodigoErrorGenerico;
 import itson.org.ghosttracks.entidades.Preventa;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import itson.org.ghosttracks.fachadas.FachadaPersistencia;
@@ -33,6 +35,16 @@ public class PreventaBO implements IPreventaBO{
             throw new NegocioException("No se puedieron recuperar las preventas registradas.", ex);
         }
         
+    }
+
+    @Override
+    public PreventaDTO registrarPreventa(NuevaPreventaDTO nuevaPreventa) throws NegocioException {
+        try {
+            Preventa preventaRegistrada = datos.registrarPreventa(PreventaMapper.toPreventa(nuevaPreventa));
+            return PreventaMapper.toDTO(preventaRegistrada);
+        } catch (PersistenciaException ex) {
+            throw new NegocioException( "No fue posible registrar la nueva preventa.", ex);
+        }
     }
     
 }

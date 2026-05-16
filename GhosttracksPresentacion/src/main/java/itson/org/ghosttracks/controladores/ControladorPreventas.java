@@ -2,14 +2,14 @@
 package itson.org.ghosttracks.controladores;
 
 import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
+import itson.org.ghosttracks.dtos.NuevaPreventaDTO;
 import itson.org.ghosttracks.dtos.PreventaDTO;
 import itson.org.ghosttracks.navegadores.NavegadorPreventas;
-import itson.org.ghosttracks.negocio.objetosNegocio.Excepciones.NegocioException;
-import itson.org.ghosttracks.preventaas.CUPreventas;
-import itson.org.ghosttracks.preventas.excepciones.PreventaException;
+import itson.org.ghosttracks.preventas.CUPreventas;
 import java.util.Collections;
 import java.util.List;
-import itson.org.ghosttracks.preventaas.ICUPreventas;
+import itson.org.ghosttracks.preventas.ICUPreventas;
+import itson.org.ghosttracks.preventas.excepciones.PreventaException;
 
 /**
  *
@@ -39,9 +39,19 @@ public class ControladorPreventas {
     public List<PreventaDTO> consultarPreventas(FiltroPreventaDTO filtro) {
         try {
             return subsysPreventas.consultarPreventas(filtro);
-        } catch (NegocioException ex) {
-            navegador.mostrarMensaje(ex.getMessage(), true);
+        } catch (PreventaException ex) {
+            navegador.mostrarMensaje(ManejadorErrores.obtenerMensaje(ex.getCodigoError()), true);
             return Collections.emptyList();
+        }
+    }
+    
+    public boolean registrarPreventa(NuevaPreventaDTO nuevaPreventa) {
+        // TODO
+        try {
+            subsysPreventas.registrarPreventa(nuevaPreventa);
+            return true;
+        } catch (PreventaException ex) {
+            return false;
         }
     }
     

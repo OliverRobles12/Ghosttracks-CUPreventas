@@ -27,5 +27,10 @@ public class FachadaPersistencia implements IFachadaPersistencia {
         return preventasDAO.consultarPreventas(filtro);
         
     }
+
+    @Override
+    public Preventa registrarPreventa(Preventa nuevaPreventa) throws PersistenciaException {
+        return preventasDAO.registrarPreventa(nuevaPreventa);
+    }
     
 }

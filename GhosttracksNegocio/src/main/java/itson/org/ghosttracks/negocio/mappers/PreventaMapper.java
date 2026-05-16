@@ -1,6 +1,7 @@
 
 package itson.org.ghosttracks.negocio.mappers;
 
+import itson.org.ghosttracks.dtos.NuevaPreventaDTO;
 import itson.org.ghosttracks.dtos.PreventaDTO;
 import itson.org.ghosttracks.dtos.enums.EstadoPreventa;
 import itson.org.ghosttracks.entidades.Preventa;
@@ -44,6 +45,32 @@ public class PreventaMapper {
         }
         
         return listaDtos;
+    }
+    
+    public static Preventa toPreventa(NuevaPreventaDTO nuevaPreventa) {
+        
+        itson.org.ghosttracks.enums.EstadoPreventa estadoPreventa = null;
+        if (nuevaPreventa.getEstado() != null) {
+            estadoPreventa = itson.org.ghosttracks.enums.EstadoPreventa.valueOf(nuevaPreventa.getEstado().name());
+        }
+        
+        Preventa preventa = new Preventa( 
+                null, // Id de la preventa
+                nuevaPreventa.getFolio(), // Folio de la preventa
+                nuevaPreventa.getFechaPublicacion(), // Fecha publicacion
+                nuevaPreventa.getFechaCierre(),  // Fecha cierre
+                nuevaPreventa.getFechaProcesado(),  // Fecha procesado
+                estadoPreventa, // Estado de la preventa
+                nuevaPreventa.getStockAsignado(), // Stock actual 
+                nuevaPreventa.getStockAsignado(), // Stock asignado
+                nuevaPreventa.getPrecio(), // Precio en preventa
+                nuevaPreventa.getNota(),  // Nota de la preventa
+                nuevaPreventa.getImagen(), // Imagen de la preventa
+                null // Producto en preventa
+        );
+        
+        return preventa;
+        
     }
     
 }
