@@ -5,6 +5,8 @@ import itson.org.ghosttracks.dtos.ProductoDTO;
 import itson.org.ghosttracks.dtos.enums.EstadoProducto;
 import itson.org.ghosttracks.dtos.enums.TipoProducto;
 import itson.org.ghosttracks.entidades.Producto;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -15,33 +17,47 @@ public class ProductoMapper {
     private ProductoMapper() {
     }
 
-    public static ProductoDTO toDTO(Producto entidad) {
-        if (entidad == null) return null;
+    public static ProductoDTO toDTO(Producto producto) {
+        if (producto == null) return null;
         
         TipoProducto tipoProducto = null;
-        if (entidad.getTipo() != null) {
-            tipoProducto = TipoProducto.valueOf(entidad.getTipo().name());
+        if (producto.getTipo() != null) {
+            tipoProducto = TipoProducto.valueOf(producto.getTipo().name());
         }
         
         EstadoProducto estadoProducto = null;
-        if (entidad.getEstado()!= null) {
-            estadoProducto = estadoProducto.valueOf(entidad.getEstado().name());
+        if (producto.getEstado()!= null) {
+            estadoProducto = estadoProducto.valueOf(producto.getEstado().name());
         }
         
-        ProductoDTO dto = new ProductoDTO();
-        dto.setIdProducto(entidad.getIdProducto());
-        dto.setNombre(entidad.getNombre());
-        dto.setImgProducto(entidad.getImgProducto());
-        dto.setTipoProducto(tipoProducto);
-        dto.setArtista(entidad.getArtista());
-        dto.setGenero(entidad.getGenero());
-        dto.setSetlist(entidad.getSetlist());
-        dto.setPrecio(entidad.getPrecio());
-        dto.setStock(entidad.getStock());
-        dto.setEstado(estadoProducto);
-        return dto;
+        ProductoDTO productoDTO = new ProductoDTO();
+        productoDTO.setIdProducto(producto.getIdProducto());
+        productoDTO.setNombre(producto.getNombre());
+        productoDTO.setFolio(producto.getFolio());
+        productoDTO.setImgProducto(producto.getImgProducto());
+        productoDTO.setTipoProducto(tipoProducto);
+        productoDTO.setArtista(producto.getArtista());
+        productoDTO.setGenero(producto.getGenero());
+        productoDTO.setSetlist(producto.getSetlist());
+        productoDTO.setPrecio(producto.getPrecio());
+        productoDTO.setStock(producto.getStock());
+        productoDTO.setEstado(estadoProducto);
+        return productoDTO;
     }
 
+    public static List<ProductoDTO> toDTO(List<Producto> listaEntidades) {
+        List<ProductoDTO> listaDtos = new ArrayList<>();
+        
+        if (listaEntidades != null && !listaEntidades.isEmpty()) {
+            for (Producto producto : listaEntidades) {
+                listaDtos.add(toDTO(producto));
+            }
+        }
+        
+        return listaDtos;
+        
+    }
+    
     public static Producto toEntidad(ProductoDTO dto) {
         if (dto == null) {
             return null;

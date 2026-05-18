@@ -4,7 +4,6 @@ package itson.org.ghosttracks.negocio.objetosNegocio;
 import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
 import itson.org.ghosttracks.dtos.NuevaPreventaDTO;
 import itson.org.ghosttracks.dtos.PreventaDTO;
-import itson.org.ghosttracks.dtos.codigos.CodigoErrorGenerico;
 import itson.org.ghosttracks.entidades.Preventa;
 import itson.org.ghosttracks.exceptions.PersistenciaException;
 import itson.org.ghosttracks.fachadas.FachadaPersistencia;

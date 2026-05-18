@@ -35,8 +35,10 @@ public class PantallaPreventas extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1100, 675));
 
+        pnlContenido.setBackground(new java.awt.Color(237, 229, 222));
         pnlContenido.setPreferredSize(new java.awt.Dimension(1100, 675));
 
+        tblPreventas.setBackground(new java.awt.Color(217, 217, 217));
         tblPreventas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},

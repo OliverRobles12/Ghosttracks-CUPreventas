@@ -66,7 +66,7 @@ public class PreventaMapper {
                 nuevaPreventa.getPrecio(), // Precio en preventa
                 nuevaPreventa.getNota(),  // Nota de la preventa
                 nuevaPreventa.getImagen(), // Imagen de la preventa
-                null // Producto en preventa
+                ProductoMapper.toEntidad(nuevaPreventa.getProducto()) // Producto en preventa
         );
         
         return preventa;

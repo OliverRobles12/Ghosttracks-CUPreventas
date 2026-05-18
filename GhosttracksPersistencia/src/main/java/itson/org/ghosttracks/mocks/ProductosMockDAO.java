@@ -1,5 +1,6 @@
 package itson.org.ghosttracks.mocks;
 
+import itson.org.ghosttracks.persistencia.dtos.FiltroProductoDTO;
 import itson.org.ghosttracks.daos.IProductosDAO;
 import itson.org.ghosttracks.entidades.Producto;
 import itson.org.ghosttracks.enums.EstadoProducto;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -33,7 +35,8 @@ public class ProductosMockDAO implements IProductosDAO {
         
         //PRODUCTO 1 
         Producto producto1 = new Producto(
-                1L,                       
+                1L,
+                "PROD-0001",
                 "Abbey Road",             
                 "AbbeyRoad.png",         
                 TipoProducto.VINILO,       
@@ -49,7 +52,8 @@ public class ProductosMockDAO implements IProductosDAO {
 
         // PRODUCTO 2
         Producto producto2 = new Producto(
-                2L, 
+                2L,
+                "PROD-0002",
                 "Thriller", 
                 "Thriller.png", 
                 TipoProducto.CD,         
@@ -65,7 +69,8 @@ public class ProductosMockDAO implements IProductosDAO {
 
         //PRODUCTO 3
         Producto producto3 = new Producto(
-                3L, 
+                3L,
+                "PROD-0003",
                 "Breach", 
                 "JoshDun.png", 
                 TipoProducto.CASSETTE,    
@@ -82,7 +87,8 @@ public class ProductosMockDAO implements IProductosDAO {
         contadorId++;
         
         Producto producto4 = new Producto(
-                4L,                       
+                4L,
+                "PROD-0004",
                 "Who Really Cares?",             
                 "TvGirl.png",         
                 TipoProducto.VINILO,       
@@ -99,7 +105,8 @@ public class ProductosMockDAO implements IProductosDAO {
         contadorId++;
         
         Producto producto5 = new Producto(
-                5L,                       
+                5L,
+                "PROD-0005",
                 "Chromakopia",             
                 "Chromakopia.png",         
                 TipoProducto.CD,       
@@ -164,6 +171,21 @@ public class ProductosMockDAO implements IProductosDAO {
         this.productosDB.add(nuevoProducto);
         return nuevoProducto;
         
+    }
+
+    @Override
+    public List<Producto> consultarProductos(FiltroProductoDTO filtro) throws PersistenciaException {
+        return productosDB.stream()
+            .filter(p -> {
+                boolean cumpleFolio = filtro.getFolio() == null || p.getFolio().contains(filtro.getFolio());
+
+                boolean cumpleNombre = filtro.getNombreProducto() == null || p.getNombre().contains(filtro.getNombreProducto());
+
+                boolean cumpleEstado = filtro.getEstado() == null || p.getEstado().equals(filtro.getEstado());
+
+                return cumpleFolio && cumpleNombre && cumpleEstado;
+            })
+            .collect(Collectors.toList());
     }
     
 }

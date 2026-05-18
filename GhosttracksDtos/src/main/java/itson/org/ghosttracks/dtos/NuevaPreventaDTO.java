@@ -19,11 +19,12 @@ public class NuevaPreventaDTO {
     private float precio;
     private String nota;
     private byte[] imagen;
+    private ProductoDTO producto;
 
     public NuevaPreventaDTO() {
     }
 
-    public NuevaPreventaDTO(String folio, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int stockAsignado, float precio, String nota, byte[] imagen) {
+    public NuevaPreventaDTO(String folio, LocalDateTime fechaPublicacion, LocalDateTime fechaCierre, LocalDateTime fechaProcesado, EstadoPreventa estado, int stockAsignado, float precio, String nota, byte[] imagen, ProductoDTO producto) {
         this.folio = folio;
         this.fechaPublicacion = fechaPublicacion;
         this.fechaCierre = fechaCierre;
@@ -33,8 +34,9 @@ public class NuevaPreventaDTO {
         this.precio = precio;
         this.nota = nota;
         this.imagen = imagen;
+        this.producto = producto;
     }
-
+    
     public String getFolio() {
         return folio;
     }
@@ -59,6 +61,10 @@ public class NuevaPreventaDTO {
         return estado;
     }
 
+    public void setEstado(EstadoPreventa estado) {
+        this.estado = estado;
+    }
+
     public int getStockAsignado() {
         return stockAsignado;
     }
@@ -74,5 +80,9 @@ public class NuevaPreventaDTO {
     public byte[] getImagen() {
         return imagen;
     }
-    
+
+    public ProductoDTO getProducto() {
+        return producto;
+    }
+
 }

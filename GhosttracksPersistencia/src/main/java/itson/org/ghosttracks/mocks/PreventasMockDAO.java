@@ -1,7 +1,7 @@
  
 package itson.org.ghosttracks.mocks;
 
-import itson.org.ghosstracks.persistencia.dtos.FiltroPreventaDTO;
+import itson.org.ghosttracks.persistencia.dtos.FiltroPreventaDTO;
 import itson.org.ghosttracks.daos.IPreventasDAO;
 import itson.org.ghosttracks.daos.IProductosDAO;
 import itson.org.ghosttracks.entidades.Preventa;
@@ -107,25 +107,20 @@ public class PreventasMockDAO implements IPreventasDAO {
     
     @Override
     public Preventa registrarPreventa(Preventa nuevaPreventa) throws PersistenciaException  {
-        Preventa p = new Preventa();
-        p.setIdPreventa(String.valueOf(System.currentTimeMillis())); // Generamos id
-        p.setImagen(nuevaPreventa.getImagen()); 
-        p.setPrecio(nuevaPreventa.getPrecio());
-        
-        baseDeDatosSimulada.add(p);
-        System.out.println("Mock: Preventa guardada con éxito. Folio: " + p.getFolioPreventa());
-        return p;
+        nuevaPreventa.setIdPreventa(String.valueOf(System.currentTimeMillis())); // Generamos id
+        Producto prod = productosDAO.buscarPorId(nuevaPreventa.getProducto().getIdProducto());
+        nuevaPreventa.setProducto(prod);
+        baseDeDatosSimulada.add(nuevaPreventa);
+        System.out.println("Mock: Preventa guardada con éxito. Folio: " + nuevaPreventa.getFolioPreventa());
+        return nuevaPreventa;
     }
 
     @Override
     public List<Preventa> consultarPreventas(FiltroPreventaDTO filtro) throws PersistenciaException  {
         return baseDeDatosSimulada.stream()
             .filter(p -> {
-                // Filtro por Folio (si no es nulo)
                 boolean cumpleFolio = filtro.getFolio() == null || p.getFolioPreventa().contains(filtro.getFolio());
-                // Filtro por Estado
                 boolean cumpleEstado = filtro.getEstado() == null || p.getEstado().equals(filtro.getEstado());
-
                 return cumpleFolio && cumpleEstado;
             })
             .collect(Collectors.toList());

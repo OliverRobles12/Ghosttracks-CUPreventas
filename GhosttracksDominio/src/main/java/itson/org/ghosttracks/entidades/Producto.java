@@ -11,7 +11,7 @@ import java.util.List;
     
 public class Producto {
     private Long idProducto; 
-    
+    private String folio;
     private String nombre;
     private String imgProducto;
     private TipoProducto tipoProducto;
@@ -49,6 +49,36 @@ public class Producto {
         this.precio = precio;
         this.stock = stock;
         this.estado = estado;
+    }
+
+    public Producto(Long idProducto, String folio, String nombre, String imgProducto, TipoProducto tipoProducto, String artista, String genero, List<String> setlist, Double precio, Integer stock, EstadoProducto estado) {
+        this.idProducto = idProducto;
+        this.folio = folio;
+        this.nombre = nombre;
+        this.imgProducto = imgProducto;
+        this.tipoProducto = tipoProducto;
+        this.artista = artista;
+        this.genero = genero;
+        this.setlist = setlist;
+        this.precio = precio;
+        this.stock = stock;
+        this.estado = estado;
+    }
+    
+    public String getFolio() {
+        return folio;
+    }
+
+    public void setFolio(String folio) {
+        this.folio = folio;
+    }
+
+    public TipoProducto getTipoProducto() {
+        return tipoProducto;
+    }
+
+    public void setTipoProducto(TipoProducto tipoProducto) {
+        this.tipoProducto = tipoProducto;
     }
 
     public Long getIdProducto() {

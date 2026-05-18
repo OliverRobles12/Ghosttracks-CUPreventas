@@ -1,7 +1,7 @@
 
-package itson.org.ghosstracks.persistencia.dtos;
+package itson.org.ghosttracks.persistencia.dtos;
 
-import itson.org.ghosstracks.persistencia.enums.EstadoPreventa;
+import itson.org.ghosttracks.persistencia.enums.EstadoPreventa;
 import java.time.LocalDateTime;
 
 /**

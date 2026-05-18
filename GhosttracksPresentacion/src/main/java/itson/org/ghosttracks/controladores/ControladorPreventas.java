@@ -2,8 +2,10 @@
 package itson.org.ghosttracks.controladores;
 
 import itson.org.ghosttracks.dtos.FiltroPreventaDTO;
+import itson.org.ghosttracks.dtos.FiltroProductoDTO;
 import itson.org.ghosttracks.dtos.NuevaPreventaDTO;
 import itson.org.ghosttracks.dtos.PreventaDTO;
+import itson.org.ghosttracks.dtos.ProductoDTO;
 import itson.org.ghosttracks.navegadores.NavegadorPreventas;
 import itson.org.ghosttracks.preventas.CUPreventas;
 import java.util.Collections;
@@ -36,6 +38,28 @@ public class ControladorPreventas {
         navegador.irPantallaEditarPreventa();
     }
     
+    /**
+     * Accede a la pantalla de busqueda de productos.
+     * @return ProductoDTO seleccioanda.
+     */
+    public ProductoDTO buscarArticulo() {
+        return navegador.abrirDialogSeleccionarProducto();
+    }
+    
+    public List<ProductoDTO> consultarProductos(FiltroProductoDTO filtro) {
+        try {
+            return subsysPreventas.consultarProductos(filtro);
+        } catch (PreventaException ex) {
+            navegador.mostrarMensaje(ManejadorErrores.obtenerMensaje(ex.getCodigoError()), true);
+            return Collections.emptyList();
+        }
+    }
+    
+    /**
+     * Consulta las preventas registradas.
+     * @param filtro Filtro de busqueda.
+     * @return Lista de las preventas encontradas
+     */
     public List<PreventaDTO> consultarPreventas(FiltroPreventaDTO filtro) {
         try {
             return subsysPreventas.consultarPreventas(filtro);
@@ -45,14 +69,23 @@ public class ControladorPreventas {
         }
     }
     
+    /**
+     * Registra la nueva preventa
+     * @param nuevaPreventa
+     * @return 
+     */
     public boolean registrarPreventa(NuevaPreventaDTO nuevaPreventa) {
-        // TODO
         try {
-            subsysPreventas.registrarPreventa(nuevaPreventa);
+            PreventaDTO preventa = subsysPreventas.registrarPreventa(nuevaPreventa);
+            navegador.mostrarMensaje("La preventa ha sido registrada correctamente con el folio: " + preventa.getFolioPreventa(), false);
             return true;
         } catch (PreventaException ex) {
             return false;
         }
+    }
+    
+    public void mostrarMensaje(String mensaje, boolean esError) {
+        navegador.mostrarMensaje(mensaje, esError);
     }
     
 }

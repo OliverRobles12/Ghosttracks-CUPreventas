@@ -11,6 +11,7 @@ import java.util.List;
 public class ProductoDTO {
     
     private Long idProducto;
+    private String folio;
     private String nombre;
     private String imgProducto;
     private TipoProducto tipoProducto;
@@ -48,12 +49,33 @@ public class ProductoDTO {
         this.estado = estado;
     }
 
+    public ProductoDTO(Long idProducto, String folio, String nombre, String imgProducto, TipoProducto tipoProducto, String artista, String genero, Double precio, Integer stock, EstadoProducto estado) {
+        this.idProducto = idProducto;
+        this.folio = folio;
+        this.nombre = nombre;
+        this.imgProducto = imgProducto;
+        this.tipoProducto = tipoProducto;
+        this.artista = artista;
+        this.genero = genero;
+        this.precio = precio;
+        this.stock = stock;
+        this.estado = estado;
+    }
+
     public Long getIdProducto() {
         return idProducto;
     }
 
     public void setIdProducto(Long idProducto) {
         this.idProducto = idProducto;
+    }
+
+    public String getFolio() {
+        return folio;
+    }
+
+    public void setFolio(String folio) {
+        this.folio = folio;
     }
 
     public String getNombre() {

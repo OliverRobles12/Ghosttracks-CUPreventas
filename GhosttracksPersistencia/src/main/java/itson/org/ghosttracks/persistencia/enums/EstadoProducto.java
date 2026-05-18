@@ -1,5 +1,5 @@
 
-package itson.org.ghosstracks.persistencia.enums;
+package itson.org.ghosttracks.persistencia.enums;
 
 /**
  *

@@ -4,6 +4,8 @@
  */
 package itson.org.ghosttracks.negocio.interfaces;
 
+import itson.org.ghosttracks.dtos.FiltroProductoDTO;
+import itson.org.ghosttracks.dtos.ProductoDTO;
 import itson.org.ghosttracks.entidades.Producto;
 import itson.org.ghosttracks.negocio.objetosNegocio.Excepciones.NegocioException;
 import java.util.List;
@@ -15,4 +17,5 @@ import java.util.List;
 public interface IProductosBO {
     public abstract List<Producto> obtenerTodos() throws NegocioException;
     public abstract Producto obtenerProductoPorId(Long id) throws NegocioException;
+    public abstract List<ProductoDTO> consultarProductos(FiltroProductoDTO filtro) throws NegocioException;
 }
